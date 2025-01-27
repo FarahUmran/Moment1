@@ -63,6 +63,11 @@ body, html {
     padding: 0;
 }
 
+/* döljer text som visas sen när man trycker på knappen */
+.hidden {
+    display: none;
+}
+
 /* Styling för stora skärmar */
 @media screen and (min-width: 601px) {
     .grid {
