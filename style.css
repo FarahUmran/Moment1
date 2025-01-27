@@ -6,7 +6,7 @@
   
   /* Style the links inside the navigation bar */
   .nav a {
-    float: center;
+    float:left;
     display: block;
     color: #171515;
     text-align: center;
@@ -33,10 +33,10 @@
 }
 
 
-main {
+.text {
     background-color: #fafaf4;
     height: auto;
-    margin-left: 30%;
+    margin-left: 20%;
     margin-right: 30%;
     line-height: 1.6em;
     padding: 3%;
@@ -48,6 +48,44 @@ h1 {
 }
 
 img {
-    width: 500px;
+    width: 400px;
     padding: 2%;
+}
+
+.grid {
+    /* margin-left: 20%;
+    margin-right: 30%; */
+    display: flex;
+    justify-items: center;
+    
+}
+
+
+/* Grundläggande reset */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling för stora skärmar */
+@media screen and (min-width: 601px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Två kolumner med lika breda spalter */
+      
+    }
+
+    img {
+        width: 70%; /* Bildens bredd kommer att vara 50% av föräldraelementets bredd */
+        height: auto; /* Bibehåller bildens proportioner */
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* en kolumr */
+       
+    }
 }
